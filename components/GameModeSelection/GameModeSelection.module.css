@@ -1,0 +1,58 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  height: 100%;
+  padding: 15px 0;
+  gap: 15px;
+}
+
+.heading {
+  text-align: center;
+}
+
+.selection {
+  --card-width: 100%;
+  --card-height: 220px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 380px;
+  padding: 15px;
+  gap: 15px;
+}
+
+@media (min-width: 900px) {
+  .selection {
+    --card-width: 220px;
+    --card-height: 220px;
+    flex-direction: row;
+    justify-content: center;
+    max-width: 550px;
+  }
+
+  .card {
+    justify-content: center;
+  }
+}
+
+.card {
+  cursor: pointer;
+  border: 2px solid var(--header-outline);
+  border-radius: 8px;
+  transition: border-color 100ms ease, background-color 100ms ease;
+  transition: border-color 100ms ease, background-color 100ms ease,
+    transform 100ms ease;
+  width: var(--card-width);
+  display: flex;
+  padding: 20px;
+}
+
+.selected {
+  border-color: var(--white);
+  box-shadow: 0 0 10px 5px var(--elevation-shadow);
+  color: var(--score-text);
+}

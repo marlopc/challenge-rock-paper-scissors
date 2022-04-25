@@ -1,0 +1,180 @@
+.option {
+  width: 140px;
+  height: 140px;
+  background: var(--white);
+  border-radius: 50%;
+  box-shadow: 0 0 15px 5px var(--elevation-shadow);
+  border-bottom: 8px solid var(--elevation-shadow);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.medium {
+  width: 160px;
+  height: 160px;
+  border-bottom: 10px solid var(--elevation-shadow);
+}
+
+.results {
+  width: 100px;
+  height: 100px;
+  border-bottom: 10px solid var(--elevation-shadow);
+}
+
+.option > div {
+  margin-top: 5px;
+  width: 105px;
+  height: 105px;
+  background: var(--white-gray);
+  border-radius: 50%;
+  border-top: 6px solid #b9c0d3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.medium > div {
+  width: 120px;
+  height: 120px;
+}
+
+.results > div {
+  width: 150px;
+  height: 150px;
+}
+
+.option > div > div {
+  width: 50px;
+  height: 50px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.results > div > div {
+  width: 70px;
+  height: 70px;
+}
+
+.scissors > div > div {
+  background-image: url("../../../assets/images/icon-scissors.svg");
+}
+
+.paper > div > div {
+  background-image: url("../../../assets/images/icon-paper.svg");
+}
+
+.rock > div > div {
+  background-image: url("../../../assets/images/icon-rock.svg");
+}
+
+.lizard > div > div {
+  background-image: url("../../../assets/images/icon-lizard.svg");
+}
+
+.spock > div > div {
+  background-image: url("../../../assets/images/icon-spock.svg");
+}
+
+.scissors {
+  background: linear-gradient(
+    var(--scissors-gradient-from),
+    var(--scissors-gradient-to)
+  );
+  border-color: var(--scissors-shadow);
+}
+
+.rock {
+  background: linear-gradient(
+    var(--rock-gradient-from),
+    var(--rock-gradient-to)
+  );
+  border-color: var(--rock-shadow);
+}
+
+.paper {
+  background: linear-gradient(
+    var(--paper-gradient-from),
+    var(--paper-gradient-to)
+  );
+  border-color: var(--paper-shadow);
+}
+
+.lizard {
+  background: linear-gradient(
+    var(--lizard-gradient-from),
+    var(--lizard-gradient-to)
+  );
+  border-color: var(--lizard-shadow);
+}
+
+.spock {
+  background: linear-gradient(
+    var(--spock-gradient-from),
+    var(--spock-gradient-to)
+  );
+  border-color: var(--spock-shadow);
+}
+
+.option:not(.glowing) {
+  z-index: 1;
+}
+
+.glowing {
+  z-index: 0;
+
+  box-shadow: 0 0 1px 55px #ffffff15, 0 0 1px 105px #ffffff15,
+    0 0 1px 165px #ffffff15;
+}
+
+@media (min-width: 900px) {
+  .option {
+    width: 140px;
+    height: 140px;
+    border-bottom: 8px solid var(--elevation-shadow);
+  }
+
+  .medium {
+    width: 160px;
+    height: 160px;
+    border-bottom: 10px solid var(--elevation-shadow);
+  }
+
+  .results {
+    width: 200px;
+    height: 200px;
+    border-bottom: 10px solid var(--elevation-shadow);
+  }
+
+  .option > div {
+    margin-top: 5px;
+    width: 105px;
+    height: 105px;
+  }
+
+  .medium > div {
+    width: 120px;
+    height: 120px;
+  }
+
+  .results > div {
+    width: 150px;
+    height: 150px;
+  }
+
+  .option > div > div {
+    width: 50px;
+    height: 50px;
+  }
+
+  .results > div > div {
+    width: 70px;
+    height: 70px;
+  }
+
+  .glowing {
+    box-shadow: 0 0 1px 55px #ffffff15, 0 0 1px 105px #ffffff15,
+      0 0 1px 165px #ffffff15;
+  }
+}

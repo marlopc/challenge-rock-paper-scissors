@@ -1,8 +1,8 @@
 import type { NextPage } from "next";
-import styles from "~/styles/Landing.module.css";
+import GameModeSelection from "~/components/GameModeSelection/GameModeSelection";
 
 const Landing: NextPage = () => {
-  return <div className={styles.main} />;
+  return <GameModeSelection />;
 };
 
 export default Landing;
