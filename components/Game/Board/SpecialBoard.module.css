@@ -1,7 +1,7 @@
 .container {
-  --option-offset: 25px;
+  --option-offset: 5px;
   --option-with-offset: calc(var(--option-radius) - var(--option-offset));
-  padding: var(--option-radius);
+  padding: var(--option-radius) 0 80px;
   opacity: 1;
   transition: opacity 2500ms ease;
   display: flex;
@@ -19,12 +19,12 @@
 
 @media (min-width: 900px) {
   .container {
-    --option-offset: 22px;
+    --option-offset: 5px;
   }
 
   .path {
-    width: 256px;
-    height: 235px;
+    width: 264px;
+    height: 260px;
   }
 }
 
@@ -42,18 +42,31 @@
 }
 
 .path > :nth-child(2) {
-  opacity: 0;
-  top: calc(var(--option-with-offset) * -1);
-  right: calc(var(--option-with-offset) * -1);
+  top: 17%;
+  left: calc(var(--option-with-offset) * -1);
 }
 
 .path > :nth-child(3) {
-  opacity: 0;
-  bottom: calc(calc(var(--option-with-offset) - var(--option-offset)) * -1);
+  top: 17%;
+  right: calc(var(--option-with-offset) * -1);
 }
 
 .path > :nth-child(4) {
+  bottom: calc(calc(var(--option-with-offset) - var(--option-offset)) * -1);
+  left: calc(var(--option-offset) * -1);
 }
 
 .path > :nth-child(5) {
+  bottom: calc(calc(var(--option-with-offset) - var(--option-offset)) * -1);
+  right: calc(var(--option-offset) * -1);
+}
+
+@media (min-width: 900px) {
+  .path > :nth-child(4) {
+    left: 0;
+  }
+
+  .path > :nth-child(5) {
+    right: 0;
+  }
 }

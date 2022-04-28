@@ -17,6 +17,22 @@ const SpecialBoard: React.FC<SpecialBoardProps> = ({
       <ul className={styles.path}>
         <li>
           <OptionButton
+            option="scissors"
+            size="small"
+            onClick={handlePick}
+            disabled={disabled}
+          />
+        </li>
+        <li>
+          <OptionButton
+            option="spock"
+            size="small"
+            onClick={handlePick}
+            disabled={disabled}
+          />
+        </li>
+        <li>
+          <OptionButton
             option="paper"
             size="small"
             onClick={handlePick}
@@ -25,7 +41,7 @@ const SpecialBoard: React.FC<SpecialBoardProps> = ({
         </li>
         <li>
           <OptionButton
-            option="scissors"
+            option="lizard"
             size="small"
             onClick={handlePick}
             disabled={disabled}

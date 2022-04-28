@@ -85,9 +85,9 @@
 
 @media (min-width: 900px) {
   .option {
-    width: 120px;
-    height: 120px;
-    border-bottom: 8px solid var(--elevation-shadow);
+    width: 115px;
+    height: 115px;
+    border-bottom: 5px solid var(--elevation-shadow);
   }
 
   .medium {
@@ -104,8 +104,8 @@
 
   .option > div {
     margin-top: 5px;
-    width: 95px;
-    height: 95px;
+    width: 88px;
+    height: 88px;
   }
 
   .medium > div {
