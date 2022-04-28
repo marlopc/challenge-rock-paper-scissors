@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "~/components/Header/Header.module.css";
-import { ScoreStorage } from "~/hooks/lib/useScoreStorage";
+import { ScoreStorage } from "~/hooks/lib/scoreStorage";
 import { GameModes } from "~/hooks/useGame";
 import NormalMode from "../svg/gamemodes/NormalMode";
 import SpecialMode from "../svg/gamemodes/SpecialMode";
