@@ -22,6 +22,8 @@
   --score-text: #2a46c0;
   --header-outline: #606e85;
   --elevation-shadow: #0d0f1c3e;
+  --text-shadow: #0c0c0cfd;
+  --header-height: 105px;
 }
 
 html,
@@ -40,6 +42,17 @@ body {
 h1,
 h2 {
   letter-spacing: 0.1rem;
+  text-shadow: 0 0 4px var(--text-shadow);
+}
+
+p {
+  letter-spacing: 0.08rem;
+  text-shadow: 0 0 4px var(--text-shadow);
+}
+
+ul,
+li {
+  list-style: none;
 }
 
 *,
@@ -73,4 +86,10 @@ main {
     var(--background-gradient-from),
     var(--background-gradient-to)
   );
+}
+
+@media (min-width: 900px) {
+  :root {
+    --header-height: 135px;
+  }
 }

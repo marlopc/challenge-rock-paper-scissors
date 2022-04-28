@@ -1,18 +1,17 @@
 import { ButtonHTMLAttributes } from "react";
 import Option, { OptionProps } from "./Option";
 
-type OptionButtonProps = OptionProps &
-  Omit<ButtonHTMLAttributes<HTMLButtonElement>, "type">;
+type OptionButtonProps = OptionProps & ButtonHTMLAttributes<HTMLButtonElement>;
 
 const OptionButton: React.FC<OptionButtonProps> = ({
   option,
-  type,
+  size,
   glowing,
   ...rest
 }) => {
   return (
-    <button {...rest}>
-      <Option option={option} type={type} glowing={glowing} />
+    <button value={option ?? ""} tabIndex={rest.disabled ? -1 : 0} {...rest}>
+      <Option option={option} size={size} glowing={glowing} />
     </button>
   );
 };

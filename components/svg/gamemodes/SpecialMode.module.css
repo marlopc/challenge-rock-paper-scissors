@@ -1,5 +1,14 @@
 .svg {
   background: url("../../../assets/images/logo-bonus.svg") no-repeat;
-  width: 161px;
-  height: 115px;
+  background-size: contain;
+  width: 140px;
+  height: 83px;
+}
+
+@media (min-width: 900px) {
+  .svg {
+    background-size: auto;
+    width: 161px;
+    height: 115px;
+  }
 }

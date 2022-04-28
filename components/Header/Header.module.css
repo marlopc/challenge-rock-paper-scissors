@@ -2,10 +2,16 @@
   display: flex;
   width: 100%;
   border: 3px solid var(--header-outline);
-  padding: 15px;
+  padding: 10px 15px;
   border-radius: 8px;
   justify-content: space-between;
   max-width: 680px;
-  max-height: 145px;
+  max-height: var(--header-height);
   overflow: hidden;
+}
+
+@media (min-width: 900px) {
+  .container {
+    max-height: 135px;
+  }
 }
