@@ -1,7 +1,7 @@
 .safeArea {
   height: 100vh;
   padding-top: var(--header-space);
-  min-height: 500px;
+  min-height: 600px;
   overflow: hidden;
   width: 100%;
 }
@@ -30,6 +30,16 @@
 .hide > :first-child {
   max-height: 0;
   opacity: 0;
+}
+
+@media (max-height: 487px) {
+  .screen {
+    min-height: 435px;
+  }
+
+  .hide > :first-child {
+    min-height: 0;
+  }
 }
 
 @media (min-width: 900px) {
