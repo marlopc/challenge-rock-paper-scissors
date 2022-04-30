@@ -1,20 +1,24 @@
 import React from "react";
 import { isWindow } from "./lib/environment";
 
-const smallScreenMediaQuery = "(max-width: 899px)";
+const isWindowWidthLessThan = (width: number | string) =>
+  matchMedia(`(max-width: ${width}px)`).matches;
 
-const initialState = isWindow() && matchMedia(smallScreenMediaQuery).matches;
+const getInitialState = (width: number | string) =>
+  isWindow() && isWindowWidthLessThan(width);
 
-const useSmallScreen = () => {
-  const [isSmallScreen, setIsSmallScreen] = React.useState(initialState);
+const useSmallScreen = (width: number = 899) => {
+  const [isSmallScreen, setIsSmallScreen] = React.useState(
+    getInitialState(width)
+  );
 
   const handleResize = React.useCallback(() => {
-    const isSmallScreenNow = matchMedia(smallScreenMediaQuery).matches;
+    const isSmallScreenNow = isWindowWidthLessThan(width);
 
     if (isSmallScreen === isSmallScreenNow) return;
 
     setIsSmallScreen(isSmallScreenNow);
-  }, [isSmallScreen]);
+  }, [isSmallScreen, width]);
 
   React.useEffect(() => {
     window.addEventListener("resize", handleResize);

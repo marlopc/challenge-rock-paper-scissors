@@ -1,0 +1,14 @@
+.rules {
+  width: 100%;
+  min-height: 435px;
+  background: no-repeat center;
+  background-size: contain;
+}
+
+.normal {
+  background-image: url("../../assets/images/image-rules.svg");
+}
+
+.special {
+  background-image: url("../../assets/images/image-rules-bonus.svg");
+}

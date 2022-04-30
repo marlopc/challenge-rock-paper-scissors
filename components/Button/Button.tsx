@@ -8,17 +8,20 @@ type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
   label: string;
 };
 
-const Button: React.FC<ButtonProps> = ({ solid, label, expand, ...rest }) => {
+const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(function Button(
+  { solid, label, expand, ...rest },
+  ref
+) {
   const className = clsx(styles.container, {
     [styles.expand]: expand,
     [styles.solid]: solid,
   });
 
   return (
-    <button className={className} {...rest}>
+    <button className={className} ref={ref} {...rest}>
       {label}
     </button>
   );
-};
+});
 
 export default Button;
