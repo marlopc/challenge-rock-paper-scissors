@@ -70,7 +70,6 @@
   justify-content: center;
   width: 100%;
   overflow: auto;
-  padding: 0 15px;
 }
 
 @media (min-width: 600px) {
@@ -113,5 +112,9 @@
 
   .close {
     margin: 0;
+  }
+
+  .body {
+    padding: 0 15px;
   }
 }
