@@ -92,6 +92,7 @@
     width: auto;
     justify-content: flex-start;
     position: static;
+    padding: 30px 15px;
   }
 
   .header {
